@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GbEmu": {
+      "commandName": "Project",
+      "commandLineArgs": "emu \"C:\\Users\\iok11\\Desktop\\Tetris (W) (V1.0) [!].gb\""
+    }
+  }
+}
