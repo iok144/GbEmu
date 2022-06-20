@@ -3,10 +3,12 @@
     internal class Bus
     {
         private Cart Cart { get; set; }
+        private Ram Ram { get; set; }
 
         internal Bus(Cart cart)
         {
             Cart = cart;
+            Ram = new Ram();
         }
 
         internal byte ReadBus(UInt16 address)
@@ -33,7 +35,7 @@
             if (address < 0xE000)
             {
                 //WRAM
-                return ReadWRam(address);
+                return Ram.ReadWRam(address);
             }
 
             Console.WriteLine("NOT IMPLEMENTED");
@@ -64,15 +66,11 @@
 
             if (address < 0xE000)
             {
-                //WriteWRam(address, value);
+                Ram.WriteWRam(address, value);
+                return;
             }
 
             Console.WriteLine("NOT IMPLEMENTED");
-        }
-
-        private byte ReadWRam(UInt16 address)
-        {
-            return 0;
         }
     }
 }
