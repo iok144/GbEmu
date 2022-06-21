@@ -8,18 +8,18 @@
 
         internal void RunEmu(string[] args)
         {
-            if (args.Count() < 2)
+            if (args.Count() < 1)
             {
-                Console.WriteLine("Usage: emu <rom_file>");
+                Console.WriteLine("Please specify ROM file");
                 return;
             }
 
             var cart = new Cart();
-            var cartLoaded = cart.LoadCart(args[1]);
+            var cartLoaded = cart.LoadCart(args[0]);
 
             if (!cartLoaded)
             {
-                Console.WriteLine($"Failed to load ROM file: {args[1]}");
+                Console.WriteLine($"Failed to load ROM file: {args[0]}");
                 return;
             }
 
