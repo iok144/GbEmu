@@ -2,7 +2,7 @@
 Game Boy emulator.  
 Supported hardware: DMG-01.  
   
-Currently only few CPU instructions supported without PPU emulation and graphics.  
+Currently only few CPU instructions supported without PPU emulation or graphics.  
 Outputs debug info and finishes when unknown CPU instruction has been met.
 ## Usage
 ```
